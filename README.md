@@ -1,4 +1,6 @@
 0x011 .C Printf
+AUTHORS: This code is written by DONJOR KARINA and OLOKUNTOYE TEMITOLA
+
 The aim of the project is to understand the concept of team work and therefore, demisifying the concept of printf
 
 Tasks
