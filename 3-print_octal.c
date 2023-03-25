@@ -4,6 +4,7 @@
  * print_octal - Prints the numeric representation of a number in octal base
  * @list: List of all the arguments passed to the program
  * Return: Number of symbols printed to stdout
+ * This code is written by DONJOR KARINA and OLOKUNTOYE TEMITOLA
  */
 
 int print_octal(va_list list)
