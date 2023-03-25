@@ -4,6 +4,7 @@
  * print_HEX - Prints a representation of a decimal number on base16 Uppercase
  * @list: List of the arguments passed to the function
  * Return: Number of characters printed
+ * This code is written by DONJOR KARINA and OLOKUNTOYE TEMITOLA
  */
 
 int print_HEX(va_list list)

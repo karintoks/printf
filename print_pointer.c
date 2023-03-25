@@ -4,6 +4,7 @@
  * print_pointer - prints an hexgecimal number.
  * @val: arguments.
  * Return: counter.
+ * This code is written by DONJOR KARINA and OLOKUNTOYE TEMITOLA
  */
 
 int print_pointer(va_list val)
@@ -30,3 +31,4 @@ int print_pointer(va_list val)
 	b = print_hex_aux(a);
 	return (b + 2);
 }
+

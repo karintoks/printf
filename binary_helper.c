@@ -5,6 +5,7 @@
  * @num: The number for which the length is being calculated
  * @base: Base to be calculated by
  * Return: An integer representing the length of a number
+ * This code is written by DONJOR KARINA and OLOKUNTOYE TEMITOLA
  */
 
 unsigned int base_len(unsigned int num, int base)
