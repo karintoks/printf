@@ -35,6 +35,7 @@ int print_String(va_list l)
  * alphanumeric char on ASCII table
  * @c: input char
  * Return: true or false
+ * This code is written by DONJOR KARINA and OLOKUNTOYE TEMITOLA
  */
 
 int isNonAlphaNumeric(char c) 
