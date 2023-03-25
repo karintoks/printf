@@ -4,6 +4,7 @@
  * print_hex_aux - prints an hexgecimal number.
  * @num: arguments.
  * Return: counter.
+ * This code is written by DONJOR KARINA and OLOKUNTOYE TEMITOLA
  */
 
 int print_hex_aux(unsigned long int num)
