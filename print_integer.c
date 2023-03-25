@@ -19,6 +19,7 @@ int print_integer(va_list list)
  * print_number - prints a number send to this function
  * @args: List of arguments
  * Return: The number of arguments printed
+ * This code is written by DONJOR KARINA and OLOKUNTOYE TEMITOLA
  */
 
 int print_number(va_list args)
