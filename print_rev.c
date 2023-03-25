@@ -4,6 +4,7 @@
  * print_rev - prints a string in reverse
  * @l: argument from _printf
  * Return: length of the printed string
+ * This code is written by DONJOR KARINA and OLOKUNTOYE TEMITOLA
  */
 
 int print_rev(va_list l)
