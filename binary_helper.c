@@ -71,6 +71,7 @@ void write_base(char *str)
  * @src: Source to copy from
  * @n: The number of bytes to copy
  * Return: The _memcpy() function returns a pointer to dest.
+ * This code is written by DONKOR KARINA and TEMITOLA Olokuntoye
  */
 
 char *_memcpy(char *dest, char *src, unsigned int n)
