@@ -1,4 +1,4 @@
-_PRINTF(3)
+i_PRINTF(3)
 
 NAME
 	_printf - prints supplied string with certain operators for substitution and formatting
@@ -15,7 +15,7 @@ EXAMPLES
 	_print("Alx Project %d", n);
 
 REPORTING BUGS
-    Report _printf bugs to https://www.github.com/adenicole/printf    
+    Report _printf bugs to https://www.github.com/karintoks/printf    
 
 AUTHORS
 	Made by DONJOR KARINA and Temitola
