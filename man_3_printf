@@ -1,4 +1,4 @@
-i_PRINTF(3)
+_PRINTF(3)
 
 NAME
 	_printf - prints supplied string with certain operators for substitution and formatting
@@ -18,4 +18,5 @@ REPORTING BUGS
     Report _printf bugs to https://www.github.com/karintoks/printf    
 
 AUTHORS
-	Made by DONJOR KARINA and Temitola
+
+This code is written by DONJOR KARINA and OLOKUNTOYE TEMITOLA
