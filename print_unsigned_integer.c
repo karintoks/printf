@@ -4,6 +4,7 @@
  * print_unsigned_integer - Prints Unsigned integers
  * @list: List of all of the argumets
  * Return: a count of the numbers
+ * This code is written by DONJOR KARINA and OLOKUNTOYE TEMITOLA
  */
 
 int print_unsigned_integer(va_list list)
