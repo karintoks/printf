@@ -4,6 +4,7 @@
  * print_binary - Converts a number from base 10 to binary
  * @list: List of arguments passed to this function
  * Return: The length of the number printed
+ * This code is written by DONJOR KARINA and OLOKUNTOYE TEMITOLA
  */
 
 int print_binary(va_list list)
