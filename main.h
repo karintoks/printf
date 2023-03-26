@@ -12,7 +12,7 @@
 
 /**
  * struct convert - defines a structure for symbols and functions
- * This code is written by DONJOR KARINA and OLOKUNTOYE TEMITOLA
+ * Ccode is written by DONJOR KARINA and OLOKUNTOYE TEMITOLA
  * @sym: The operator
  * @f: The function associated
  */
