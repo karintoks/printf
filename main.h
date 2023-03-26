@@ -81,7 +81,6 @@ int print_pointer(va_list types, char buffer[],
 
 /* Funciotns to handle other specifiers */
 int get_flags(const char *format, int *i);
-int format_reciever(const char *format, conver_t f_list[], va_list arg_list);
 int get_width(const char *format, int *i, va_list list);
 int get_precision(const char *format, int *i, va_list list);
 int get_size(const char *format, int *i);
@@ -93,7 +92,7 @@ int print_reverse(va_list types, char buffer[],
 /*Function to print a string in rot 13*/
 int print_rot13string(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
-/
+
 /* width handler */
 int handle_write_char(char c, char buffer[],
 	int flags, int width, int precision, int size);
