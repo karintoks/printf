@@ -38,6 +38,11 @@ struct fmt
  * @fm_t: The function associated.
  */
 typedef struct fmt fmt_t;
+int _printf(const char *format, ...);
+int handle_print(const char *format, va_list *args);
+int handle_conversion(char specifier, va_list *args);
+int write_char(char c);
+int handle_conversion(char specifier, va_list *args);
 
 int _printf(const char *format, ...);
 int handle_print(const char *fmt, int *i,
