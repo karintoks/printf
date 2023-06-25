@@ -1,6 +1,6 @@
 #include "main.h"
 
-/************************* PRINT UNSIGNED NUMBER *************************/
+/******** PRINT UNSIGNED NUMBER ********/
 /**
  * print_unsigned - Prints an unsigned number
  * @types: List of arguments
@@ -20,22 +20,22 @@ int print_unsigned(va_list types, char buffer[],
 	num = convert_size_unsgnd(num, size);
 
 	if (num == 0)
-		buffer[n--] = '0';
+		buffer[n = n - 1] = '0';
 
 	buffer[BUFF_SIZE - 1] = '\0';
 
 	while (num > 0)
 	{
-		buffer[n--] = (num % 10) + '0';
+		buffer[n = n - 1] = (num % 10) + '0';
 		num /= 10;
 	}
 
-	n++;
+	n = n + 1;
 
 	return (write_unsgnd(0, n, buffer, flags, width, precision, size));
 }
 
-/************* PRINT UNSIGNED NUMBER IN OCTAL ****************/
+/***** PRINT UNSIGNED NUMBER IN OCTAL *****/
 /**
  * print_octal - Prints an unsigned number in octal notation
  * @types: List of arguments
@@ -59,20 +59,20 @@ int print_octal(va_list types, char buffer[],
 	num = convert_size_unsgnd(num, size);
 
 	if (num == 0)
-		buffer[n--] = '0';
+		buffer[n = n - 1] = '0';
 
 	buffer[BUFF_SIZE - 1] = '\0';
 
 	while (num > 0)
 	{
-		buffer[n--] = (num % 8) + '0';
+		buffer[n = n - 1] = (num % 8) + '0';
 		num /= 8;
 	}
 
 	if (flags & F_HASH && init_num != 0)
 		buffer[n--] = '0';
 
-	n++;
+	n = n + 1;
 
 	return (write_unsgnd(0, n, buffer, flags, width, precision, size));
 }
@@ -139,23 +139,23 @@ int print_hexa(va_list types, char map_to[], char buffer[],
 	num = convert_size_unsgnd(num, size);
 
 	if (num == 0)
-		buffer[n--] = '0';
+		buffer[n = n - 1] = '0';
 
 	buffer[BUFF_SIZE - 1] = '\0';
 
 	while (num > 0)
 	{
-		buffer[n--] = map_to[num % 16];
+		buffer[n = n - 1] = map_to[num % 16];
 		num /= 16;
 	}
 
 	if (flags & F_HASH && init_num != 0)
 	{
-		buffer[n--] = flag_ch;
-		buffer[n--] = '0';
+		buffer[n = n - 1] = flag_ch;
+		buffer[n = n - 1] = '0';
 	}
 
-	n++;
+	n = n + 1;
 
 	return (write_unsgnd(0, n, buffer, flags, width, precision, size));
 }
