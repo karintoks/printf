@@ -8,103 +8,29 @@
  *
  * Return: Precision..
  */
-int _printf(const char *format, ...)
+int get_precision(const char *format, int *i, va_list list)
 {
-	va_list args;
-	int count = 0;
-
-	va_start(args, format);
-	count = handle_print(format, &args);
-	va_end(args);
-
-	return count;
+int curr_i = *i + 1;
+int precision = -1;
+if (format[curr_i] != '.')
+return (precision);
+precision = 0;
+for (curr_i += 1; format[curr_i] != '\0'; curr_i++)
+{
+if (is_digit(format[curr_i]))
+{
+precision *= 10;
+precision += format[curr_i] - '0';
 }
-
-/**
- * handle_print - Handles the printing based on the format string
- * @format: Format string
- * @args: Variable arguments list
- *
- * Return: Number of characters printed
- */
-int handle_print(const char *format, va_list *args)
+else if (format[curr_i] == '*')
 {
-	int count = 0;
-	int i = 0;
-
-	if (!format || (format[0] == '%' && format[1] == '\0'))
-		return -1;
-
-	while (format[i])
-	{
-		if (format[i] == '%')
-		{
-			i++;
-			if (format[i] == '\0')
-				return -1;
-			if (format[i] == '%')
-			{
-				count += write_char('%');
-				i++;
-				continue;
-			}
-			count += handle_conversion(format[i], args);
-		}
-		else
-		{
-			count += write_char(format[i]);
-			i++;
-		}
-	}
-
-	return count;
+curr_i++;
+precision = va_arg(list, int);
+break;
 }
-
-/**
- * handle_conversion - Handles the conversion specifier
- * @specifier: Conversion specifier
- * @args: Variable arguments list
- *
- * Return: Number of characters printed
- */
-int handle_conversion(char specifier, va_list *args)
-{
-	if (specifier == 's')
-		return write_string(va_arg(*args, char *));
-	else if (specifier == 'c')
-		return write_char(va_arg(*args, int));
-	else if (specifier == '%')
-		return write_char('%');
-	else
-		return -1;
+else
+break;
 }
-
-/**
- * write_char - Writes a single character to stdout
- * @c: Character to write
- *
- * Return: Number of characters printed (1 if successful, -1 otherwise)
- */
-int write_char(char c)
-{
-	return write(1, &c, 1);
-}
-
-/**
- * write_string - Writes a string to stdout
- * @str: String to write
- *
- * Return: Number of characters printed
- */
-int write_string(char *str)
-{
-	int len = 0;
-
-	if (str == NULL)
-		str = "(null)";
-
-	while (str[len])
-		len += write_char(str[len]);
-
-	return len;
+*i = curr_i - 1;
+return (precision);
 }
