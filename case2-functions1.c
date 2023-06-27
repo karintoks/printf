@@ -72,7 +72,7 @@ int print_octal(va_list types, char buffer[],
 	if (flags & F_HASH && init_num != 0)
 		buffer[n--] = '0';
 
-	n = n + 1;
+	n++;
 
 	return (write_unsgnd(0, n, buffer, flags, width, precision, size));
 }
