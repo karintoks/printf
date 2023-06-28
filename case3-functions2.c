@@ -84,7 +84,7 @@ int print_non_printable(va_list types, char buffer[],
 		else
 			offset += append_hexa_code(str[i], buffer, i + offset);
 
-		i++;
+		i = i + 1;
 	}
 
 	buffer[i + offset] = '\0';
@@ -123,7 +123,7 @@ int print_reverse(va_list types, char buffer[],
 
 		str = ")Null(";
 	}
-	for (i = 0; str[i]; i++)
+	for (i = 0; str[i]; i = i + 1)
 		;
 
 	for (i = i - 1; i >= 0; i--)
